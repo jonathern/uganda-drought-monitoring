@@ -1,2 +1,6 @@
 # Virtual Environments
 venv/
+
+# Other
+*.pyc
+

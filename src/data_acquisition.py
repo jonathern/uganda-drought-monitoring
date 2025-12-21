@@ -16,6 +16,7 @@ from config import (
     MODIS_CONFIG, CLIMATE_CONFIG
 )
 
+
 class DataAcquisition:
     """Handle data download and first level organization."""
     
@@ -174,4 +175,3 @@ class DataAcquisition:
 if __name__ == "__main__":
     acquirer = DataAcquisition()
     acquirer.run_all()
-# %%
