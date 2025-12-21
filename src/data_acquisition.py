@@ -168,7 +168,7 @@ class DataAcquisition:
         # Generate sample climate data
         self.generate_sample_climate_data()
         
-        print("\nData acquisition complete!")
+        print("\nData acquisition complete.")
         print(f"Data saved to: {self.raw_dir}")
         
 

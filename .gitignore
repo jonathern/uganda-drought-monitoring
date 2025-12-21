@@ -4,3 +4,5 @@ venv/
 # Other
 *.pyc
 
+# Data Files
+data/
