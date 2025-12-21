@@ -154,9 +154,9 @@ class DataAcquisition:
         
     def run_all(self):
         """Execute all data acquisition tasks."""
-        
+        print("\n")
         print("Data Acquisition")
-        print("-"*60)
+        print("_"*60)
         
         # Download boundaries
         boundaries = self.download_admin_boundaries()
@@ -174,3 +174,4 @@ class DataAcquisition:
 if __name__ == "__main__":
     acquirer = DataAcquisition()
     acquirer.run_all()
+# %%
