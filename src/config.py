@@ -13,7 +13,7 @@ OUTPUTS_DIR = PROJECT_ROOT / "outputs"
 # Make sure directories exist
 for directory in [RAW_DATA_DIR, PROCESSED_DATA_DIR, OUTPUTS_DIR]:
     directory.mkdir(parents=True, exist_ok=True)
-    
+
 # Study area configuration (Northern Uganda)
 STUDY_AREA = {
     "name": "Northern Uganda",
@@ -31,4 +31,51 @@ STUDY_AREA = {
 TIME_PERIOD = {
     "start_date": "2020-01-01",
     "end_date": "2023-12-31"
+}
+
+# MODIS configuration
+MODIS_CONFIG = {
+    "product": "MOD13Q1",  # 250m 16-day NDVI/EVI
+    "version": "061",
+    "bands": ["NDVI", "EVI", "pixel_reliability"],
+    "scale": 250  # meters
+}
+
+# Climate data configuration
+CLIMATE_CONFIG = {
+    "precipitation": {
+        "source": "CHIRPS",
+        "resolution": 0.05  # degrees
+    },
+    "temperature": {
+        "source": "ERA5-Land",
+        "variables": ["temperature_2m", "soil_temperature"]
+    }
+}
+
+# Drought indices thresholds
+DROUGHT_THRESHOLDS = {
+    "VCI": {
+        "extreme_drought": 10,
+        "severe_drought": 20,
+        "moderate_drought": 30,
+        "normal": 40
+    },
+    "VHI": {
+        "extreme_drought": 10,
+        "severe_drought": 20,
+        "moderate_drought": 30,
+        "normal": 40
+    }
+}
+
+# Visualization settings
+VIZ_CONFIG = {
+    "dpi": 300,
+    "figure_format": "png",
+    "color_schemes": {
+        "ndvi": "RdYlGn",
+        "drought": "RdYlBu_r",
+        "precipitation": "Blues"
+    }
 }
