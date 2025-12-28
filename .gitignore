@@ -3,6 +3,7 @@ venv/
 
 # Other
 *.pyc
+__pycache__/
 
 # Data Files
 data/

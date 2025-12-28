@@ -118,7 +118,7 @@ class SatelliteProcessor:
     def run_all(self):
         """Execute all processing steps."""
         print("\n")
-        print("SATELLITE DATA PROCESSING")
+        print("Satellite Data Processing")
         print("_"*60)
         
         # Process NDVI
